@@ -1,87 +1,117 @@
-otserv-client-launcher é um aplicativo desenvolvido com Electron para gerenciar o client de open tibia servers. Ele permite iniciar o jogo, verificar o status do servidor, exibir informações do servidor e atualizar o cliente quando uma nova versão estiver disponível.
+# OTServ Client Launcher
 
-Funcionalidades
-Iniciar o jogo
-Verificar o status do servidor
-Exibir informações do servidor
-Exibir os 5 melhores personagens
-Atualizar o cliente para a versão mais recente
-Estrutura do Projeto
-main.js: Arquivo principal do Electron que cria a janela do aplicativo e gerencia eventos IPC.
-preload.js: Script que é carregado antes de outros scripts na página.
-renderer.js: Script que gerencia a interface do usuário e a lógica do frontend.
-index.html: Página HTML principal do aplicativo.
-style.css: Arquivo de estilos CSS para a interface do usuário.
-config.js: Arquivo de configuração com informações do servidor.
-assets: Pasta contendo ícones e outros recursos estáticos.
-Instalação
-Clone o repositório:
+![OTServ Client Launcher Logo](assets/icons/otserv-client-launcher.png)
 
-git clone https://github.com/seu-usuario/otserv-client-launcher.git cd otserv-client-launcher
+OTServ Client Launcher is an Electron-based application designed to manage Open Tibia server clients. It offers a seamless experience for players, allowing them to launch the game, check server status, view server information, and update the client when new versions are available.
 
-Instale as dependências:
+## 🌟 Features
 
-npm install
+- 🎮 Launch the game with a single click
+- 🔄 Check real-time server status
+- ℹ️ Display comprehensive server information
+- 🏆 Showcase the top 5 characters
+- 🔄 Automatic client updates
 
-Configuração
-O arquivo config.js contém as configurações do servidor. Aqui está um exemplo de como configurá-lo:
+## 🚀 Getting Started
 
+### Prerequisites
+
+- Node.js (v14 or later)
+- npm (v6 or later)
+
+### Installation
+
+1. Clone the repository:
+   \`\`\`bash
+   git clone https://github.com/your-username/otserv-client-launcher.git
+   cd otserv-client-launcher
+   \`\`\`
+
+2. Install dependencies:
+   \`\`\`bash
+   npm install
+   \`\`\`
+
+3. Place your OTServ client files in the \`client\` folder:
+   \`\`\`
+   otserv-client-launcher/
+   ├── client/
+   │   ├── Tibia.exe
+   │   ├── ...other client files
+   \`\`\`
+
+4. Start the application:
+   \`\`\`bash
+   npm start
+   \`\`\`
+
+## ⚙️ Configuration
+
+Customize the \`config.js\` file to match your server settings:
+
+\`\`\`javascript
 const config = {
-  serverName: 'otserver-name',
+  serverName: 'YourOTServer',
   version: '13.40',
   serverType: 'PvP',
   experienceRate: 3,
   skillRate: 2,
   magicLevelRate: 1,
   backgroundImage: 'path/to/background-image.jpg',
-  websiteUrl: 'https://yourwebsite'
+  websiteUrl: 'https://yourwebsite.com'
 };
+\`\`\`
 
-serverName: Nome do servidor.
-version: Versão atual do cliente.
-serverType: Tipo de servidor (PvP, PvE, etc.).
-experienceRate: Taxa de experiência.
-skillRate: Taxa de habilidades.
-magicLevelRate: Taxa de nível mágico.
-backgroundImage: Caminho para a imagem de fundo.
-websiteUrl: URL do site do servidor.
+## 📁 Project Structure
 
-Uso
-Inicie o aplicativo:
+\`\`\`
+otserv-client-launcher/
+├── assets/
+│   └── icons/
+│       └── otserv-client-launcher.ico
+├── client/
+│   └── ... (client files)
+├── config.js
+├── index.html
+├── main.js
+├── preload.js
+├── renderer.js
+├── style.css
+└── .gitignore
+\`\`\`
 
-npm start
+## 🏗️ Building the Application
 
-A interface do launcher será exibida, permitindo que você inicie o jogo, verifique o status do servidor e atualize o cliente.
+1. Install \`electron-packager\`:
+   \`\`\`bash
+   npm install electron-packager --save-dev
+   \`\`\`
 
-Atualização do Cliente
-Em desenvolvimento
+2. Add a build script to \`package.json\`:
+   \`\`\`json
+   "scripts": {
+     "start": "electron .",
+     "build": "electron-packager . otserv-client-launcher --platform=win32 --arch=x64 --out=dist --icon=assets/icons/otserv-client-launcher.ico --overwrite"
+   }
+   \`\`\`
 
-Estrutura de Arquivos
-otserv-client-launcher/ ├── assets/ │ └── icons/ │ └── otserv-client-launcher.ico ├── config.js ├── index.html ├── main.js ├── preload.js ├── renderer.js ├── style.css └── .gitignore
+3. Run the build script:
+   \`\`\`bash
+   npm run build
+   \`\`\`
 
-Geração de Build
-Para gerar uma build do aplicativo, você pode usar o electron-packager ou o electron-builder. Aqui está um exemplo de como usar o electron-packager:
+The built application will be available in the \`dist\` folder.
 
-Instale o electron-packager:
+## 🤝 Contributing
 
-npm install electron-packager --save-dev
+We welcome contributions! Please follow these steps:
 
-Adicione um script de build no package.json:
+1. Fork the project
+2. Create your feature branch (\`git checkout -b feature/AmazingFeature\`)
+3. Commit your changes (\`git commit -m 'Add some AmazingFeature'\`)
+4. Push to the branch (\`git push origin feature/AmazingFeature\`)
+5. Open a Pull Request
 
-"scripts": {
-  "start": "electron .",
-  "build": "electron-packager . otserv-client-launcher --platform=win32 --arch=x64 --out=dist --icon=assets/icons/otserv-client-launcher.ico --overwrite"
-}
+Made by [caminha](https://github.com/lucas-caminha)
+\`\`\`
 
-Execute o script de build:
-
-npm run build
-
-Isso irá gerar a build do aplicativo na pasta dist.
-
-Contribuição
-Fork o projeto
-Crie uma nova branch (git checkout -b feature/nova-funcionalidade)
-Commit suas mudanças (git commit -am 'Adiciona nova funcionalidade')
-Push para a branch (git push origin feature/nova-funcionalidade)
-Crie um novo Pull Request
