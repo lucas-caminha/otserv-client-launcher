@@ -37,7 +37,7 @@ OTServ Client Launcher is an Electron-based application designed to manage Open 
    otserv-client-launcher/
    ├── client/
    │   ├── Tibia.exe
-   │   ├── ...other client files
+   │   └── ...other client files
    \`\`\`
 
 4. Start the application:
@@ -51,14 +51,14 @@ Customize the \`config.js\` file to match your server settings:
 
 \`\`\`javascript
 const config = {
-  serverName: 'YourOTServer',
-  version: '13.40',
-  serverType: 'PvP',
-  experienceRate: 3,
-  skillRate: 2,
-  magicLevelRate: 1,
+  serverName:      'YourOTServer',
+  version:         '13.40',
+  serverType:      'PvP',
+  experienceRate:  3,
+  skillRate:       2,
+  magicLevelRate:  1,
   backgroundImage: 'path/to/background-image.jpg',
-  websiteUrl: 'https://yourwebsite.com'
+  websiteUrl:      'https://yourwebsite.com'
 };
 \`\`\`
 
@@ -66,11 +66,14 @@ const config = {
 
 \`\`\`
 otserv-client-launcher/
+│
 ├── assets/
 │   └── icons/
 │       └── otserv-client-launcher.ico
+│
 ├── client/
 │   └── ... (client files)
+│
 ├── config.js
 ├── index.html
 ├── main.js
