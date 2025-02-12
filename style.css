@@ -1,0 +1,219 @@
+body {
+  font-family: "Crimson Text", serif;
+  background-color: #0a0a0a;
+  background-image: url("https://example.com/path-to-your-berserk-inspired-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: #d0d0d0;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  padding-bottom: 20px;
+}
+
+.main-content,
+.highscores-section {
+  background-color: rgba(20, 20, 20, 0.9);
+  box-shadow: 0 0 20px rgba(139, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  width: 100%;
+  border: 2px solid #8b0000;
+  box-sizing: border-box;
+}
+
+.main-content {
+  max-width: 800px;
+}
+
+.highscores-section {
+  max-width: 400px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#server-name {
+  font-family: "Cinzel", serif;
+  font-size: 2.5em;
+  margin: 0;
+  color: #d4af37;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+#server-status {
+  font-size: 1.2em;
+  color: #8b0000;
+  font-style: italic;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.btn {
+  font-family: "Cinzel", serif;
+  padding: 12px 24px;
+  font-size: 1em;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-bottom: 15px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.btn-primary {
+  background-color: #8b0000;
+  color: #d4af37;
+}
+
+.btn-secondary {
+  background-color: #333;
+  color: #d0d0d0;
+}
+
+.btn-tertiary {
+  background-color: #d4af37;
+  color: #0a0a0a;
+}
+
+.btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.info-section,
+.highscores-section {
+  background-color: rgba(50, 50, 50, 0.7);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.info-section h2,
+.highscores-section h2 {
+  font-family: "Cinzel", serif;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  color: #d4af37;
+  border-bottom: 1px solid #8b0000;
+  padding-bottom: 5px;
+}
+
+.info-section ul,
+.highscores-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-section li,
+.highscores-section li {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: rgba(60, 60, 60, 0.5);
+  border: 1px solid #8b0000;
+  border-radius: 5px;
+}
+
+.highscores-section li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.highscores-section li::before {
+  content: "⚔";
+  margin-right: 10px;
+  color: #d4af37;
+}
+
+footer {
+  text-align: center;
+  font-size: 0.9em;
+  color: #666;
+  width: 100%;
+  padding: 10px 0;
+  background-color: rgba(10, 10, 10, 0.8);
+  border-top: 1px solid #8b0000;
+}
+
+@media (max-width: 1024px) {
+  .container {
+    width: 95%;
+  }
+
+  .main-content,
+  .highscores-section {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  #server-name {
+    font-size: 2em;
+  }
+
+  .btn {
+    font-size: 0.9em;
+    padding: 10px 20px;
+  }
+
+  .info-section,
+  .highscores-section {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .main-content,
+  .highscores-section {
+    padding: 15px;
+  }
+
+  #server-name {
+    font-size: 1.8em;
+  }
+
+  .btn {
+    font-size: 0.8em;
+    padding: 8px 16px;
+  }
+}
+

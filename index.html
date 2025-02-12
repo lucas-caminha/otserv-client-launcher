@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EclipseOT Launcher</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Crimson+Text&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <div class="main-content">
+            <header>
+                <h1 id="server-name">EclipseOT</h1>
+                <p id="server-status">Status do servidor: Verificando...</p>
+            </header>
+            
+            <main>
+                <div class="button-container">
+                    <button id="start-game" class="btn btn-primary">Jogar Agora</button>
+                    <button id="update-game" class="btn btn-secondary" disabled>Atualizar Cliente</button>
+                    <button id="visit-website" class="btn btn-tertiary">Visitar Site</button>
+                </div>
+
+                <div class="info-section">
+                    <h2>Informações do Servidor</h2>
+                    <ul>
+                        <li>Versão: <span id="server-version"></span></li>
+                        <li>Tipo: <span id="server-type"></span></li>
+                        <li>Experiência: <span id="exp-rate"></span></li>
+                        <li>Skills: <span id="skill-rate"></span></li>
+                        <li>Magic Level: <span id="magic-rate"></span></li>
+                    </ul>
+                </div>
+            </main>
+        </div>
+
+        <div class="highscores-section">
+            <h2>Top 5 Personagens</h2>
+            <ul id="highscores-list">
+                <li>Carregando...</li>
+            </ul>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; EclipseOT. Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="renderer.js"></script>
+</body>
+</html>
+
